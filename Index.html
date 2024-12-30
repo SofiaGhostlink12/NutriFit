@@ -1,0 +1,180 @@
+<!-- 
+  NutriFit
+  An expanded HTML document to showcase an improved structure with
+  additional sections (Hero, Features, Footer) for a more stylish design.
+
+  Author: [Your Name]
+  Date: [Date]
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+      meta charset: Specifies the character encoding (UTF-8).
+      meta name="viewport": Ensures the page is mobile-friendly by using the device’s width.
+      title: Displayed in the browser tab.
+      link rel="stylesheet": Links an external stylesheet (styles.css) for styling the page.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriFit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- 
+      HEADER SECTION
+      - Contains the logo/title (NutriFit) and the main navigation menu.
+    -->
+    <header>
+        <h1>NutriFit</h1>
+        <nav>
+            <ul>
+                <!-- 
+                  Navigation links:
+                  1) Hero
+                  2) Features
+                  3) Dashboard
+                  4) Log Meal
+                  5) Progress
+                  Clicking these links will scroll or jump to the respective sections below.
+                -->
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#log-meal">Log Meal</a></li>
+                <li><a href="#progress">Progress</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 
+      HERO SECTION
+      - A visually striking, full-width banner, typically with an image or background color.
+      - Introduce the app in a compelling way and invite users to learn more.
+    -->
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Welcome to NutriFit</h2>
+            <p>Your personal companion for healthy eating and balanced nutrition.</p>
+            <a href="#features" class="btn-cta">Learn More</a>
+        </div>
+    </section>
+
+    <!-- 
+      FEATURES SECTION
+      - Highlight the main benefits or unique selling points of NutriFit.
+    -->
+    <section id="features">
+        <h2>Why Use NutriFit?</h2>
+        <div class="features-container">
+            <div class="feature">
+                <h3>Track Your Meals</h3>
+                <p>Easily log what you eat to get a quick breakdown of calories and macros.</p>
+            </div>
+            <div class="feature">
+                <h3>Stay Motivated</h3>
+                <p>Set goals and monitor your progress through easy-to-read charts.</p>
+            </div>
+            <div class="feature">
+                <h3>Healthy Habits</h3>
+                <p>Learn tips and tricks for balanced nutrition, meal planning, and more.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+      MAIN SECTION
+      - Contains the core functionality of the NutriFit app:
+        1) Dashboard 
+        2) Log Meal
+        3) Progress
+    -->
+    <main>
+        <!-- 
+          DASHBOARD SECTION
+          - Displays the user's daily totals for Calories, Protein, Carbs, and Fats.
+        -->
+        <section id="dashboard">
+            <h2>Your Dashboard</h2>
+            <div id="stats">
+                <div class="stat">
+                    <h3>Calories</h3>
+                    <p id="calories">0</p>
+                </div>
+                <div class="stat">
+                    <h3>Protein</h3>
+                    <p id="protein">0g</p>
+                </div>
+                <div class="stat">
+                    <h3>Carbs</h3>
+                    <p id="carbs">0g</p>
+                </div>
+                <div class="stat">
+                    <h3>Fats</h3>
+                    <p id="fats">0g</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          LOG MEAL SECTION
+          - Contains a form where the user can log a meal.
+        -->
+        <section id="log-meal">
+            <h2>Log Your Meal</h2>
+            <form id="meal-form">
+                <label for="meal">Meal Name:</label>
+                <input type="text" id="meal" name="meal" required>
+
+                <label for="calories">Calories:</label>
+                <input type="number" id="meal-calories" name="calories" required>
+
+                <label for="protein">Protein (g):</label>
+                <input type="number" id="meal-protein" name="protein" required>
+
+                <label for="carbs">Carbs (g):</label>
+                <input type="number" id="meal-carbs" name="carbs" required>
+
+                <label for="fats">Fats (g):</label>
+                <input type="number" id="meal-fats" name="fats" required>
+
+                <button type="submit">Add Meal</button>
+            </form>
+        </section>
+
+        <!-- 
+          PROGRESS SECTION
+          - Displays a chart (using <canvas>) showing the user's progress over time.
+        -->
+        <section id="progress">
+            <h2>Your Progress</h2>
+            <canvas id="progress-chart"></canvas>
+        </section>
+    </main>
+
+    <!-- 
+      FOOTER SECTION
+      - Contains copyright or additional navigation, 
+        social media links, or contact information.
+    -->
+    <footer>
+        <p>&copy; 2024 NutriFit. All rights reserved.</p>
+        <div class="footer-socials">
+            <a href="#" aria-label="Facebook"><img src="icons/facebook.svg" alt="Facebook"></a>
+            <a href="#" aria-label="Twitter"><img src="icons/twitter.svg" alt="Twitter"></a>
+            <a href="#" aria-label="Instagram"><img src="icons/instagram.svg" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <!-- 
+      Script tag: references an external JavaScript file (script.js)
+      where event handling, dynamic updates to stats, and chart rendering occur.
+    -->
+    <script src="script.js"></script>
+</body>
+
+</html>
